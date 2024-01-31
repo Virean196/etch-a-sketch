@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+#mainDiv{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.pixels{
+    flex:auto;
+    border:0.5px solid black;
+    border:hidden;
+}
+
+.btns{
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+}
