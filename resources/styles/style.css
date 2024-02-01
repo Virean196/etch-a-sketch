@@ -3,26 +3,27 @@
 }
 
 body{
+    box-sizing: border-box;
     display:flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     padding: 0;
     margin: 0;
 }
 
 #mainDiv{
+    box-sizing: border-box;
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
-    height: 500px;
-    border: 1px solid black;
+    width: 602px;
+    height: 602px;
+    border: 0.2px solid black;
 }
 
 .pixels{
-    flex:auto;
-    border:0.5px solid black;
-    border:hidden;
+
 }
 
 .btns{
