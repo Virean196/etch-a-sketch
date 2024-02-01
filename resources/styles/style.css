@@ -4,17 +4,31 @@
 
 body{
     box-sizing: border-box;
-    display:flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     padding: 0;
     margin: 0;
+    background-color: whitesmoke;
 }
 
-#mainDiv{
+header{
+    text-align: center;
+}
+
+.mainDiv{
+    display:flex;
+    justify-content: center;
+}
+
+.etchDiv{
+    display:flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+#frame{
     box-sizing: border-box;
-    margin: 20px;
     display: flex;
     flex-wrap: wrap;
     width: 602px;
@@ -22,13 +36,8 @@ body{
     border: 0.2px solid black;
 }
 
-.pixels{
-
-}
-
 .btns{
-    margin-top:20px;
     display: flex;
     flex-direction: column;
-    height: 20px;
+    gap: 20px;
 }

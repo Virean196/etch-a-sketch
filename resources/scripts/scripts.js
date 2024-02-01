@@ -1,4 +1,4 @@
-let mainDiv = document.getElementById("mainDiv");
+let mainDiv = document.getElementById("frame");
 let sizeBtn = document.getElementById("sizeBtn");
 let resetGridBtn = document.getElementById("resetGridBtn");
 let colorBtn = document.getElementById("colorBtn");
