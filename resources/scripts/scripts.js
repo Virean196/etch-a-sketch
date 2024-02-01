@@ -5,18 +5,6 @@ let colorBtn = document.getElementById("colorBtn");
 let size = 16;
 let color = "black";
 
-colorBtn.addEventListener("click", function(){
-    color = prompt("Choose a color:");
-})
-
-sizeBtn.addEventListener("click", function(){
-    size = prompt("Choose the grid size (max 100)");
-    deleteGrid();
-    createGrid();
-});
-
-resetGridBtn.addEventListener("click", resetGridColor);
-
 function deleteGrid(){
     while(mainDiv.firstChild){
         mainDiv.removeChild(mainDiv.lastChild);
@@ -24,12 +12,12 @@ function deleteGrid(){
 }
 
 function createGrid(){
-    if(size <= 50){
+    if(size <= 100){
         for(let i = 0; i<(size*size); i++){
             const pixel = document.createElement("div");
             pixel.classList.add("pixels");
-            pixel.style.height = `${(mainDiv.clientHeight)/size}px`;
-            pixel.style.width = `${(mainDiv.clientWidth)/size}px`;
+            pixel.style.height = `${((mainDiv.clientHeight)/size).toFixed(2)}px`;
+            pixel.style.width = `${((mainDiv.clientWidth)/size).toFixed(2)}px`;
             pixel.addEventListener("mousemove", () => {
                 pixel.style.background = color;
             });
@@ -44,5 +32,18 @@ function resetGridColor(){
         pixel.style.background = "white";
     });
 }
+
+colorBtn.addEventListener("click", function(){
+    color = prompt("Choose a color:");
+})
+
+sizeBtn.addEventListener("click", function(){
+    size = prompt("Choose the grid size (max 100)");
+    deleteGrid();
+    createGrid();
+});
+
+resetGridBtn.addEventListener("click", resetGridColor);
+
 
 createGrid();
